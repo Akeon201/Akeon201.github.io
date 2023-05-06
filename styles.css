@@ -1,0 +1,40 @@
+body {
+    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-image: url("img/bg_pic.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  
+  .navbar-brand {
+    font-weight: 500;
+    padding-right: 260px;
+  }
+  
+  .navbar-toggler {
+    font-weight: 400;
+  }
+  
+  .nav-link {
+    font-weight: 600;
+    margin-right: 10px;
+  }
+
+  /*.nav-options {
+    margin-left: 250px;
+  }*/
+  
+  .navbar-shrink {
+    background-color: rgba(14, 12, 10, 0.9);
+    transition: background-color 0.5s ease;
+  }
+
+  #pdf_logo {
+    margin-bottom: 5px;
+  }
+  
+  /* Add smooth scrolling effect for navigation */
+  .nav-link[href^="#"] {
+    cursor: pointer;
+  }
+  
