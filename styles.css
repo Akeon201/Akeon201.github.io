@@ -51,7 +51,7 @@ body {
 
   /* Include everything inside header */
   .header-container{
-    
+    margin-top: 20px;
     position: relative;
     min-height: 90vh;
     display: flex;
