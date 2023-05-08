@@ -16,19 +16,19 @@
         <script src="https://kit.fontawesome.com/7c514939e3.js" crossorigin="anonymous"></script>
     </head>
     <body id="#top-page">
-      <div id="filter"></div> 
 
+  <div class="bar-header-downarrow" id="filter">
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top navbar-shrink" id="mainNav">
         <div class="container">
-          <a class="navbar-brand js-scroll-trigger" href="#top-page"><b>Kenyon Leblanc</b></a>
+          <a class="navbar-brand js-scroll-trigger" href="#top-page" style="color: #fc9d10;"><b>Kenyon Leblanc</b></a>
           <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             Menu
           </button>
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav text-uppercase ml-auto nav-options">
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger active" href="#about">About</a>
+                <a class="nav-link js-scroll-trigger" href="#about">About</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
@@ -50,7 +50,7 @@
         </div>
       </nav>
 
-      <!-- Page header -->
+    <!-- Page header -->
     <header>
       <div class="container header-container">
         <div class="header-content">
@@ -58,7 +58,7 @@
           <img class="img-fluid rounded-circle" src="img/header_pic.jpg" style="border:7px solid white;" width="250" height="250">
         </div>
         <div class="header-name">
-          <h1 style="font-weight: 600; font-size: 600%; color: rgb(255, 255, 255);">Kenyon Leblanc</h1>
+          <h1 style="font-weight: 600; font-size: 600%; color: #ffffff;">Kenyon Leblanc</h1>
         </div>
         <div class="header-description">
           <h3 class="h-d-1" style="color: white;"><em>Software Engineer @ Cinteot  - Undergraduate</em></h3>
@@ -67,20 +67,49 @@
           <a class="btn btn-lg btn-light js-scroll-trigger" id="header-button"  href="#about">About Me</a>
         </div>
         </div>
-        <div class="header-arrow">
-          <a href="#about">
-          <i class="fa-solid fa-angle-down fa-3x fa-bounce" style="color: #ffffffff"></i>
-          </a>
-        </div>
       </div>
     </header>
 
-    
+    <!-- Bouncing arrow in header -->
+    <div class="container down-arrow">
+      <a class="nav-link js-scroll-trigger" href="#about">
+      <i class="fa-solid fa-angle-down fa-3x fa-bounce js-scroll-trigger" style="color: #ffffffff"></i>
+      </a>
+    </div>
+  </div>
 
+  <!-- About me-->
+  <section id="about">
+    <!-- header -->
+      <div class="container">
+        <div class="about-header">
+          <h1 style="font-size: 48pt; font-weight: 600;">About Me</h1>
+      </div>
+    </div>
+    <!-- Body -->
+    <div class="container">
+      <div class="about-body row">
+        <div class="col-sm-12 col-lg-4">
+          <img class="img-fluid rounded-circle" src="img/header_pic.jpg" style="border:7px solid rgb(255, 255, 255);" width="350" height="350">
+          <div class="about-icons">
+            <ul class="list-inline" style="display: flex; justify-content: right; padding-top: 1rem;">
+              <li>
+                <img class="list-inline-item" src="img/github.png" width="40" height="40">
+                <img class="list-inline-item" src="img/linkedin.png" width="40" height="40">
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-12 col-lg-8">
+          <h1>More text here!</h1>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-      <script src="scripts.js"></script>
-    </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
+  <script src="scripts.js"></script>
+  </body>
   
 </html>
-  
