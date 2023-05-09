@@ -28,12 +28,14 @@ body {
   .navbar {
   z-index: 999;
   /*margin-bottom: 20px;*/
+  position: fixed;
+  left: 0;
+  right: 0;
   }
   
   /* Set the font weight and right padding for the navbar brand */
   .navbar-brand {
   font-weight: 600;
-  padding-right: 260px;
   }
   
   /* Set the font weight for the navbar toggler */
@@ -44,7 +46,7 @@ body {
   /* Set the font weight and right margin for the navigation links */
   .nav-link {
   font-weight: 600;
-  margin-right: 20px;
+  margin-right: 1rem;
   }
   
   /* Set the background color and transition for the navbar when it shrinks */
@@ -145,7 +147,7 @@ body {
 
 #about {
   z-index: 1;
-  background-color: #edeeef;
+  background-color: #d9dadb;
   color: black;
   display: flex;
   flex-direction: column;
@@ -171,10 +173,36 @@ body {
 
 .about-body {
   z-index: 1;
-  margin-top: 10rem;
+  margin: auto;
+  padding-top: 10rem;
+}
+
+.nav-menubutton {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.img-wrap {
+  margin-bottom: 1rem;
+}
+
+.about-icons {
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+}
+
+@media screen and (min-width: 992px) {
+  .img-wrap {
+    margin-bottom: 0;
+  }
+
+  .about-icons {
+    display: block;
+  }
 }
 
 /* {
   border: 1px solid red !important;
-}
-*/
+}*/
