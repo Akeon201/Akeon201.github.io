@@ -7,37 +7,16 @@ $(document).ready(function () {
     // Store hash
     var hash = this.hash;
 
-    // Animate
-    $("html, body").animate(
-      {
-        scrollTop: $(hash).offset().top,
-      },
-      800,
-      function () {
-        // Add hash to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      }
-    );
-  });
-});
+    // Calculate adjusted target position
+    var navbarHeight = $(".navbar").outerHeight();
+    var targetPosition = $(hash).offset().top - navbarHeight;
 
-// Add active class to nav-item when corresponding section is in view
-$(document).ready(function() {
-  var navItems = $('.nav-item');
-  var navHeight = $('header').outerHeight();
-
-  $(window).on('scroll', function() {
-    var curPos = $(this).scrollTop();
-
-    // loop through sections to find which one is currently in view
-    $('section').each(function() {
-      var top = $(this).offset().top - navHeight;
-      var bottom = top + $(this).outerHeight();
-
-      if (curPos >= top && curPos <= bottom) {
-        navItems.removeClass('active');
-        $('.nav-item a[href="#' + $(this).attr('id') + '"]').parent().addClass('active');
-      }
+    // Use animate() function to make the scrolling smooth
+    $("html, body").animate({
+      scrollTop: targetPosition
+    }, 800, function(){
+      // Add hash to URL (default click behavior) without jumping to hash
+      history.pushState(null, null, hash);
     });
   });
 });
