@@ -233,6 +233,12 @@ body {
 .about-buttons {
   padding-bottom: 1rem;
 }
+
+@media (min-width: 992px) {
+  .about-footer {
+    padding-top: 2rem;
+  }
+}
   
 /* {
   border: 1px solid red !important;
