@@ -1,6 +1,6 @@
 $(document).ready(function () {
   // Add smooth scrolling to all links
-  $("a.nav-link[href^='#'], #header-button").on("click", function (event) {
+  $("a.nav-link[href^='#'], #header-button, #about-button").on("click", function (event) {
     // Prevent default anchor click behavior
     event.preventDefault();
 
