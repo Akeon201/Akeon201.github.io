@@ -244,21 +244,18 @@
 
     <!-- Projects section -->
     <section id="projects">
-      <!-- Projects Header -->
         <div class="projects-header">
           <h1 style="font-size: 3rem; font-weight: 700;">Projects</h1>
         </div>
-      <!-- Flickity HTML init -->
       <div class="carousel js-flickity">
-        <!-- images from unsplash.com -->
         <div class="carousel-cell">
-          <img src="img/shipshell_compressed.jpg" />
+          <img src="img/shipshell_compressed.jpg" id="ship-shell-img" data-section="ship-shell-modal" />
         </div>
         <div class="carousel-cell">
-          <img src="img/sar_compressed.jpg" />
+          <img src="img/sar_compressed.jpg" id="sar-img" data-section="sar-modal" />
         </div>
         <div class="carousel-cell">
-          <img src="img/cs_compressed.jpg" />
+          <img src="img/cs_compressed.jpg" id="cs-img" data-section="" />
         </div>
       </div>
     </section>
@@ -355,9 +352,58 @@
       </footer>
     </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <!-- Modals -->
+<div class="modal" id="ship-shell-modal">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h2 class="modal-title">Ship Shell</h2>
+        <button type="button" class="close modal-close" data-dismiss="modal" data-modal-id="ship-shell" id="x-button">&times;</button>
+      </div>
+      <!-- Modal Body -->
+      <div class="modal-body row">
+        <p style="text-align: center;">A Command Line Interpreter</p>
+        <img class="img-fluid" src="img/ship-shell-ex-img.JPG" height="600px" width="900px" id="ship-img">
+        <p class="mt-3">The Ship-Shell project is a hands-on exploration of the Linux shell environment and low-level system calls. The project is built around a new Linux shell dubbed "Ship Shell," which supports several built-in commands such as "cd", "path", and "exit". It also allows users to access commands from the "/bin" folder, change Path variables, and supports features such as parallelism "&" and redirection ">".</p>
+        <p class="mt-3" style="text-align: center;"><b>View this project on GitHub: </b><a href="https://github.com/Akeon201/ship-shell" target="_blank">https://github.com/Akeon201/ship-shell</a></p>
+      </div>
+      <!-- Modal Footer -->
+      <div class="modal-footer align-self-center">
+        <a class="btn btn-danger" data-dismiss="modal">Close</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="sar-modal">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h2 class="modal-title">Ship Shell</h2>
+        <button type="button" class="close modal-close" data-dismiss="modal" data-modal-id="ship-shell" id="x-button">&times;</button>
+      </div>
+      <!-- Modal Body -->
+      <div class="modal-body row">
+        <p style="text-align: center;">Algorithm Analysis and Design</p>
+        <p class="mt-3">In this project, we explore the performance of two matrix multiplication algorithms, Strassen's and Brute Force, along with a hybrid approach that combines the strengths of both. Strassen's algorithm is a recursive method with a time complexity of O(n^2.807...), while the Brute Force algorithm has a time complexity of O(n^3). Recursion, as employed by Strassen's algorithm, often incurs considerable overhead, which can lead to significant time differences when processing smaller inputs. In some cases, Strassen's algorithm can take over ten times as long to compute matrix multiplication compared to the Brute Force approach.</p>
+        <p class="mt-3">The primary objective of this project was to identify an optimal cutoff value for the combination of Strassen's and Brute Force algorithms, ultimately maximizing the time saved during matrix multiplication. By carefully analyzing the performance of both algorithms under various input sizes, the project aimed to find a sweet spot where switching between the two methods would result in the most efficient and effective solution for matrix multiplication tasks.</p>
+        <img class="img-fluid" src="img/sar_pic.JPG" height="600px" width="900px" id="ship-img">
+        <p class="mt-3">In conclusion, the analysis of the combined algorithms for matrix multiplication demonstrates a steady decrease in the execution time as the cutoff value approaches 5. At this specific point, we observe the greatest time-saving performance. However, as the cutoff value increases beyond 5, there is a noticeable increase in execution time for values 6 through 8, indicating a diminishing return on efficiency. This trend highlights the point where the computational time required for the brute force algorithm begins to outweigh the benefits of Strassen's algorithm. Therefore, the optimal cutoff value of 5 is crucial for maximizing the efficiency and minimizing the execution time of the combined algorithm.</p>
+        <p class="mt-3" style="text-align: center;"><b>View this project on GitHub: </b><a href="https://github.com/Akeon201/Strassen-Algorithm-Research" target="_blank">https://github.com/Akeon201/Strassen-Algorithm-Research</a></p>
+      </div>
+      <!-- Modal Footer -->
+      <div class="modal-footer align-self-center">
+        <a class="btn btn-danger" data-dismiss="modal">Close</a>
+      </div>
+    </div>
+  </div>
+</div>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="scripts.js"></script>
     <script>
       var elem = document.querySelector('.js-flickity');

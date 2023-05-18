@@ -78,3 +78,35 @@ $(document).ready(function(){
     });
   }, false);
 })();
+
+// Initialize Flickity with wrapAround and draggable options
+var carousel = document.querySelector('.js-flickity');
+var flkty = new Flickity( carousel, {
+  wrapAround: true,
+  draggable: true
+});
+
+flkty.on( 'staticClick', function( event, pointer, cellElement, cellIndex ) {
+  // check if image was clicked
+  if (!cellElement) return;
+
+  var clickedImage = cellElement.querySelector('img');
+
+  // check if a valid image element exists
+  if (!clickedImage) return;
+
+  // get the modal id from the data-section attribute
+  var modalId = clickedImage.dataset.section;
+
+  // get the corresponding modal
+  var modalElement = document.getElementById(modalId);
+
+  // make sure a valid modal exists
+  if (!modalElement) return;
+
+  // create a bootstrap modal instance
+  var modal = new bootstrap.Modal(modalElement);
+
+  // open the modal
+  modal.show();
+});
