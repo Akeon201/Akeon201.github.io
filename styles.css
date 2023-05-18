@@ -1,10 +1,13 @@
 /* Set the font family for the body and background image */
 body {
   font-family: 'Roboto', 'Arial', 'Helvetica Neue', 'Lato', sans-serif;
-  background-image: url("img/bg_pic_compressed.png");
+  background-image: url("img/bg_pic_compressed.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .bar-header-downarrow {
@@ -229,6 +232,11 @@ body {
   font-weight: 600;
 }
 
+#resume-button {
+  font-size: 24px;
+  font-weight: 600;
+}
+
 .about-buttons {
   padding-bottom: 1rem;
 }
@@ -270,6 +278,196 @@ body {
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 2rem;
+}
+
+
+
+.carousel-cell img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  /* dim unselected */
+  opacity: 0.7;
+  -webkit-transform: scale(0.85);
+          transform: scale(0.85);
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s, transform 0.3s, -webkit-filter 0.3s, filter 0.3s;
+          transition: opacity 0.3s, transform 0.3s, filter 0.3s;
+}
+
+/* brighten selected image */
+.carousel-cell.is-selected img {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-filter: none;
+          filter: none;
+}
+
+@media screen and ( min-width: 768px ) {
+  .carousel-cell {
+    height: 400px;
+  }
+}
+
+@media screen and ( min-width: 960px ) {
+  .carousel-cell {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  /* buttons, no circle */
+  .flickity-prev-next-button {
+    width: 60px !important;
+    height: 60px !important;
+    background: transparent !important;
+  }
+  .carousel-cell {
+    width: 70%;
+    height: 30rem !important;
+    /* flex-box, center image in cell */
+    display: -webkit-box;
+    display: -webkit-flex;
+    display:         flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+            justify-content: center;
+    -webkit-align-items: center;
+            align-items: center;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  /* buttons, no circle */
+  .flickity-prev-next-button {
+    width: 90px !important;
+    height: 90px !important;
+    background: transparent !important;
+  }
+  .carousel-cell {
+    width: 60%;
+    height: 30rem !important;
+    /* flex-box, center image in cell */
+    display: -webkit-box;
+    display: -webkit-flex;
+    display:         flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+            justify-content: center;
+    -webkit-align-items: center;
+            align-items: center;
+  }
+}
+
+.flickity-prev-next-button:hover {
+  background: transparent;
+  opacity: 1;
+}
+/* arrow color */
+.flickity-prev-next-button .arrow {
+  fill: white;
+}
+.flickity-prev-next-button.no-svg {
+  color: white;
+}
+/* closer to edge */
+.flickity-prev-next-button.previous { left: 0; }
+.flickity-prev-next-button.next { right: 0; }
+/* hide disabled button */
+.flickity-prev-next-button:disabled {
+  display: none;
+}
+
+#projects {
+  z-index: 1;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  right: 0;
+  left: 0;
+  margin: auto;
+  padding-bottom: 11.3rem;
+  height: 100vh;
+}
+
+.projects-header {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.carousel {
+  width: 100%;
+  height: 31.2rem;
+}
+.flickity-page-dots {
+  bottom: 0 !important;
+}
+
+#contact {
+  z-index: 3;
+  background-color: #d9dadb;
+  color: #fc9d10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  right: 0;
+  left: 0;
+  margin: auto;
+  padding-bottom:20rem;
+}
+
+.btn-disabled {
+  background-color: #ccc !important; 
+  cursor: not-allowed !important;
+}
+
+#message {
+  height: 12rem;
+  min-width: 16rem;
+}
+
+#contact {
+  background-image: url("img/contact_bg_compressed.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  height: 95vh;
+}
+
+#contact-form-body {
+  background-color: white;
+  border-radius: 2rem;
+  max-width: 40rem;
+  position: absolute;
+  top: 20vh;
+}
+
+@media screen and (max-width: 765px) {
+  #contact-form-body {
+    width: 20rem;
+    top: 15vh;
+  }
+}
+
+.contact-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* {

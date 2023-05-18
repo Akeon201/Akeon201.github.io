@@ -1,6 +1,8 @@
+// Scroll behavior
 $(document).ready(function () {
+
   // Add smooth scrolling to all links
-  $("a.nav-link[href^='#'], #header-button, #about-button").on("click", function (event) {
+  $("a.nav-link[href^='#'], a.navbar-brand[href^='#'], #header-button, #about-button").on("click", function (event) {
     // Prevent default anchor click behavior
     event.preventDefault();
 
@@ -20,3 +22,59 @@ $(document).ready(function () {
     });
   });
 });
+
+//Submit behavior
+$(document).ready(function(){
+  $("form").on('submit', function(event){
+      event.preventDefault();
+
+      if (!this.checkValidity()) {
+        // Form is not valid, so don't submit it
+        event.stopPropagation();
+        $(this).addClass('was-validated');
+      } else {
+      // AJAX call to submit the form.
+      $.ajax({
+          type: $(this).attr('method'),
+          url: $(this).attr('action'),
+          data: $(this).serialize(),
+          dataType: 'json',
+          success: function(response) {
+              $("form").hide();
+              $("#submitBtn").prop("disabled", true); // disable the button
+              $("#submitBtn").addClass("btn-disabled"); // add a class for styling
+              $("#errorMsg").remove(); // remove previous error message
+              $("#successMsg").remove(); // remove previous success message
+              $("#contact .container").append("<h2 id='successMsg'>Submitted!</h2>");
+          },
+          error: function(err) {
+              $("#successMsg").remove(); // remove previous success message
+              $("#errorMsg").remove(); // remove previous error message
+              $("#contact .container").append("<h2 id='errorMsg'>Submission failed.</h2>");
+              setTimeout(function(){
+                  $('#errorMsg').fadeOut('slow');
+              }, 3000); // Wait for 3 seconds, then fade out slowly
+          }
+      });
+    }
+  });
+});
+
+// disabling form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
