@@ -33,7 +33,6 @@ body {
   position: fixed;
   left: 0;
   right: 0;
-  height: 50px;
 }
 
 /* Set the font weight and right padding for the navbar brand */
@@ -420,6 +419,22 @@ body {
   left: 0;
   margin: auto;
   padding-bottom: 11.3rem;
+  height: 100vh;
+}
+
+#projects-box {
+  z-index: 1;
+  background-color: black;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  right: 0;
+  left: 0;
+  margin: 0px;
+  padding: 0px;
   height: 100vh;
 }
 
