@@ -1,7 +1,7 @@
 /* Set the font family for the body and background image */
 body {
   font-family: 'Roboto', 'Arial', 'Helvetica Neue', 'Lato', sans-serif;
-  background-image: url("img/bg_pic_compressed.jpg");
+  background-image: url("img/bg_pic_compressed_blur.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -30,15 +30,16 @@ body {
 /* Set the styling for the navbar */
 .navbar {
   z-index: 999;
-  /*margin-bottom: 20px;*/
   position: fixed;
   left: 0;
   right: 0;
+  height: 50px;
 }
 
 /* Set the font weight and right padding for the navbar brand */
 .navbar-brand {
   font-weight: 600;
+  font-size: 25px;
 }
 
 /* Set the font weight for the navbar toggler */
@@ -55,8 +56,12 @@ body {
 
 /* Set the background color and transition for the navbar when it shrinks */
 .navbar-shrink {
-  background-color: rgba(14, 12, 10, 1);
+  background-color: rgba(14, 12, 10, 0.7);
   transition: background-color 0.5s ease;
+}
+
+.nav-name {
+  left: 100px;
 }
 
 /* Set the cursor style for the navigation links */
@@ -66,6 +71,14 @@ body {
 
 .active {
   color: rgb(255, 192, 34);
+}
+
+.nav-link:hover {
+  color: #ffa000;
+}
+
+.navbar-brand:hover {
+  color: #ffa000;
 }
 
 /* Set the position, height, and styling for the header container */
@@ -83,7 +96,7 @@ body {
 .header-content {
   position: relative;
   z-index: inherit;
-  /*margin-bottom: 100px;*/
+  margin-top: 300px;
 }
 
 /* Set the z-index and padding bottom for the header image */
@@ -129,7 +142,7 @@ body {
   position: absolute;
   z-index: 1;
   animation: bounce 2s infinite;
-  bottom: 0;
+  bottom: 2.2rem;
   left: 0;
   right: 0;
   margin: auto;
@@ -151,7 +164,7 @@ body {
 
 #about {
   z-index: 1;
-  background-color: #d9dadb;
+  background-color: #fff;
   color: black;
   display: flex;
   flex-direction: column;
@@ -230,11 +243,23 @@ body {
 #about-button {
   font-size: 24px;
   font-weight: 600;
+  background: #ffa000;
+  border: none;
+}
+
+#about-button:hover {
+  background: #178fdf;
 }
 
 #resume-button {
   font-size: 24px;
   font-weight: 600;
+  background: #ffa000;
+  border: none;
+}
+
+#resume-button:hover {
+  background: #178fdf;
 }
 
 .about-buttons {
@@ -436,10 +461,11 @@ body {
 #message {
   height: 12rem;
   min-width: 16rem;
+  resize: none;
 }
 
 #contact {
-  background-image: url("img/contact_bg_compressed.jpg");
+  background-image: url("img/contact_bg_compressed_blur.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -455,7 +481,7 @@ body {
   border-radius: 2rem;
   max-width: 40rem;
   position: absolute;
-  top: 20vh;
+  top: 10vh;
 }
 
 @media screen and (max-width: 765px) {
