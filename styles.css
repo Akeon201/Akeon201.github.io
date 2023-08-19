@@ -141,7 +141,7 @@ body {
   position: absolute;
   z-index: 1;
   animation: bounce 2s infinite;
-  bottom: 2.2rem;
+  bottom: 2.6rem;
   left: 0;
   right: 0;
   margin: auto;
@@ -419,7 +419,7 @@ body {
   left: 0;
   margin: auto;
   padding-bottom: 11.3rem;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 #projects-box {
@@ -435,7 +435,7 @@ body {
   left: 0;
   margin: 0px;
   padding: 0px;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .projects-header {
@@ -494,7 +494,7 @@ body {
 #contact-form-body {
   background-color: white;
   border-radius: 2rem;
-  max-width: 40rem;
+  max-width: 30rem;
   position: absolute;
   top: 10vh;
 }
