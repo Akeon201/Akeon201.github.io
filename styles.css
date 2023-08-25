@@ -38,6 +38,7 @@ body {
   position: fixed;
   left: 0;
   right: 0;
+  min-height: 5%;
 }
 
 /* Set the font weight and right padding for the navbar brand */
