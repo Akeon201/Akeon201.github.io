@@ -15,7 +15,7 @@ $(document).ready(function () {
 
     // Check if the navbar is in the collapsed state (mobile view)
     if ($(window).width() < 992) {
-      targetPosition = $(hash).offset().top - 54;
+      targetPosition = $(hash).offset().top - 53;
     } else {
       targetPosition = $(hash).offset().top - navbarHeight;
     }
