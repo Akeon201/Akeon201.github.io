@@ -11,8 +11,15 @@ $(document).ready(function () {
 
     // Calculate adjusted target position
     var navbarHeight = $(".navbar").outerHeight();
-    var targetPosition = $(hash).offset().top - navbarHeight;
+    var targetPosition;
 
+    // Check if the navbar is in the collapsed state (mobile view)
+    if ($(".navbar-toggler").is(":visible")) {
+      targetPosition = $(hash).offset().top;
+    } else {
+      targetPosition = $(hash).offset().top - navbarHeight;
+    }
+    
     // Use animate() function to make the scrolling smooth
     $("html, body").animate({
       scrollTop: targetPosition
