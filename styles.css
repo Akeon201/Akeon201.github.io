@@ -1,3 +1,7 @@
+html {
+  height: 100%;
+}
+
 /* Set the font family for the body and background image */
 body {
   font-family: 'Roboto', 'Arial', 'Helvetica Neue', 'Lato', sans-serif;
@@ -8,11 +12,12 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
+  height: 100%;
 }
 
 .bar-header-downarrow {
   position: relative;
-  min-height: 100vh;
+  min-height: 100%;
   width: 100%;
   height: 100%;
 }
@@ -419,7 +424,7 @@ body {
   left: 0;
   margin: auto;
   padding-bottom: 11.3rem;
-  min-height: 100vh;
+  min-height: 100%;
 }
 
 #projects-box {
@@ -435,7 +440,7 @@ body {
   left: 0;
   margin: 0px;
   padding: 0px;
-  min-height: 100vh;
+  min-height: 100%;
 }
 
 .projects-header {
@@ -487,7 +492,7 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
-  height: 95vh;
+  height: 95%;
   min-height: 52rem;
 }
 
@@ -496,13 +501,13 @@ body {
   border-radius: 2rem;
   max-width: 30rem;
   position: absolute;
-  top: 10vh;
+  top: 10%;
 }
 
 @media screen and (max-width: 765px) {
   #contact-form-body {
     width: 20rem;
-    top: 10vh;
+    top: 10%;
   }
 }
 
@@ -588,7 +593,7 @@ body {
   position: absolute;
   justify-content: center;
   align-items: center;
-  top: 0vh;
+  top: 0%;
   background-color: #fff; /* Modal content background color */
 }
 
