@@ -14,8 +14,8 @@ $(document).ready(function () {
     var targetPosition;
 
     // Check if the navbar is in the collapsed state (mobile view)
-    if ($(".navbar-toggler").is(":visible")) {
-      targetPosition = $(hash).offset().top;
+    if ($(window).width() < 992) {
+      targetPosition = $(hash).offset().top - 54;
     } else {
       targetPosition = $(hash).offset().top - navbarHeight;
     }
