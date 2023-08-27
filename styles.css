@@ -47,6 +47,11 @@ body {
   font-size: 25px;
 }
 
+#mainNav {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
 /* Set the font weight for the navbar toggler */
 .navbar-toggler {
   font-weight: 400;
@@ -59,14 +64,28 @@ body {
   color: #ffffff;
 }
 
+@media (min-width: 992px) {
+    .navbar-nav {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%);
+    }
+}
+
+.nav-item {
+  align-self: left;
+}
+
+@media (min-width: 992px) {
+  .nav-item {
+    align-self: center;
+  }
+}
+
 /* Set the background color and transition for the navbar when it shrinks */
 .navbar-shrink {
   background-color: rgba(14, 12, 10, 0.7);
   transition: background-color 0.5s ease;
-}
-
-.nav-name {
-  left: 100px;
 }
 
 /* Set the cursor style for the navigation links */
@@ -88,20 +107,22 @@ body {
 
 /* Set the position, height, and styling for the header container */
 .header-container {
-  position: relative;
+  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* Set the position and margin bottom for the header content */
 .header-content {
   position: relative;
   z-index: inherit;
-  margin-top: 300px;
 }
 
 /* Set the z-index and padding bottom for the header image */
@@ -177,25 +198,27 @@ body {
   align-items: center;
   text-align: center;
   position: relative;
+  min-height: 100dvh;
 }
 
 .about-header {
-  position: absolute;
+  position: relative;
   font-weight: 900;
   font-size: larger;
   background: rgb(255, 255, 255);
   width: 100%;
   left: 0;
-  top: 0;
   z-index: 0;
-  padding-top: 0.5rem;
+  padding-top: 1rem;
   padding-bottom: 0.5rem;
+  margin-top: 3rem;
 }
 
 .about-page {
   z-index: 1;
   margin: auto;
-  padding-top: 10rem;
+  display: flex;
+  position: relative;
 }
 
 .nav-menubutton {
@@ -287,6 +310,7 @@ body {
   align-items: center;
   text-align: center;
   position: relative;
+  min-height: 100dvh;
 }
 
 .skills-body {
@@ -425,7 +449,7 @@ body {
   left: 0;
   margin: auto;
   padding-bottom: 11.3rem;
-  min-height: 100%;
+  height: 100vh;
 }
 
 #projects-box {
@@ -471,7 +495,7 @@ body {
   right: 0;
   left: 0;
   margin: auto;
-  padding-bottom:20rem;
+  min-height: 100dvh;
 }
 
 .btn-disabled {
@@ -624,6 +648,6 @@ body.modal-open {
   align-items: center;
 }
 
-/* {
+* {
   border: 1px solid red !important;
 }

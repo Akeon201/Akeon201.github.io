@@ -11,15 +11,16 @@ $(document).ready(function () {
 
     // Calculate adjusted target position
     var navbarHeight = $(".navbar").outerHeight();
-    var targetPosition;
+    var targetPosition = $(hash).offset().top;
 
     // Check if the navbar is in the collapsed state (mobile view)
-    if ($(window).width() < 992) {
+    // Quick fix for mobile view, still need better fix.
+    /*if ($(window).width() < 992) {
       targetPosition = $(hash).offset().top - 53;
     } else {
       targetPosition = $(hash).offset().top - navbarHeight;
     }
-    
+    */
     // Use animate() function to make the scrolling smooth
     $("html, body").animate({
       scrollTop: targetPosition
@@ -30,6 +31,8 @@ $(document).ready(function () {
   });
 });
 
+// NO LONGER USED
+/*
 //Submit behavior
 $(document).ready(function(){
   $("form").on('submit', function(event){
@@ -66,7 +69,10 @@ $(document).ready(function(){
     }
   });
 });
+*/
 
+// NO LONGER USED
+/*
 // disabling form submissions if there are invalid fields
 (function() {
   'use strict';
@@ -85,6 +91,7 @@ $(document).ready(function(){
     });
   }, false);
 })();
+*/
 
 // Initialize Flickity with wrapAround and draggable options
 var carousel = document.querySelector('.js-flickity');
