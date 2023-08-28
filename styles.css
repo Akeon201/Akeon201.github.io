@@ -545,8 +545,16 @@ body {
 
 .form-control {
   font-weight: 600;
-  font-size: 1rem;
+  font-size: .8rem;
   max-width: 100%;
+  background: #f0f0f0;
+  border-color: #f0f0f0;
+  padding: 1rem;
+}
+
+.submit-box {
+  display: flex;
+  justify-content: right;
 }
 
 .submit-button {
@@ -556,6 +564,12 @@ body {
   font-size: 1rem;
   font-weight: 600;
   border-radius: .3rem;
+}
+
+@media (max-width: 600px) {
+  .submit-button {
+    width: 100%;
+  }
 }
 
 .footer {
@@ -662,6 +676,11 @@ body.modal-open {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#name::placeholder, #email::placeholder, #company::placeholder, #message::placeholder {
+  color: #a9a9a9;
+  opacity: 1;
 }
 
 /* {
