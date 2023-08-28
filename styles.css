@@ -518,14 +518,28 @@ body {
 }
 
 #contact-form-body {
-  max-width: 45rem;
+  max-width: 50rem;
   width: 95%;
 }
 
 .contact-body {
-  padding: 2rem;
+  padding: 2.5rem;
   padding-bottom: 1rem;
-  margin-top: 4rem;
+  margin-left: 0;
+  margin-right: 0;
+  box-shadow: 0px 0px 10px rgba(142, 142, 143, 0.4);
+}
+
+.seperator {
+  display: flex;
+  position: relative;
+  width: 1.5rem;
+  height: 4px;
+  background-color: coral;
+  left: 50%;
+  transform: translate(-50%);
+  border-radius: .2rem;
+  margin-bottom: 1rem;
 }
 
 .entry-name {
@@ -539,7 +553,7 @@ body {
 }
 
 .form-group {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.7rem;
 }
 
 .form-control {
@@ -548,7 +562,7 @@ body {
   max-width: 100%;
   background: #f0f0f0;
   border-color: #f0f0f0;
-  padding: 1rem;
+  padding: 1.3rem;
 }
 
 .submit-box {
@@ -563,12 +577,26 @@ body {
   font-size: 1rem;
   font-weight: 600;
   border-radius: .3rem;
+  border-width: 0;
+  background: coral;
+}
+
+.submit-button:hover {
+  background: rgb(211, 72, 21);
+}
+
+.submit-button:active {
+  background: rgb(177, 59, 16) !important;
 }
 
 @media (max-width: 600px) {
   .submit-button {
     width: 100%;
   }
+}
+
+#successMsg {
+  margin-top: 3rem;
 }
 
 .footer {
@@ -682,6 +710,6 @@ body.modal-open {
   opacity: 1;
 }
 
-* {
+/* {
   border: 1px solid red !important;
 }
