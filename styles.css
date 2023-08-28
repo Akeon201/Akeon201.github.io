@@ -496,7 +496,9 @@ body {
   left: 0;
   margin: auto;
   min-height: 100dvh;
+  padding: 2rem;
 }
+
 
 .btn-disabled {
   background-color: #ccc !important; 
@@ -518,15 +520,12 @@ body {
 #contact-form-body {
   max-width: 45rem;
   width: 95%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .contact-body {
   padding: 2rem;
   padding-bottom: 1rem;
+  margin-top: 4rem;
 }
 
 .entry-name {
@@ -683,6 +682,6 @@ body.modal-open {
   opacity: 1;
 }
 
-/* {
+* {
   border: 1px solid red !important;
 }
