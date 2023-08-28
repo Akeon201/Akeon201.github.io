@@ -73,12 +73,13 @@ body {
 }
 
 .nav-item {
-  align-self: left;
+  text-align: right;
 }
 
 @media (min-width: 992px) {
   .nav-item {
     align-self: center;
+    text-align: center;
   }
 }
 
@@ -319,7 +320,6 @@ body {
 }
 
 .skills-body-headers {
-  width: 20rem;
   margin-left: auto;
   margin-right: auto;
   font-size: 31px;
@@ -448,8 +448,7 @@ body {
   right: 0;
   left: 0;
   margin: auto;
-  padding-bottom: 11.3rem;
-  height: 100vh;
+  min-height: 100dvh;
 }
 
 #projects-box {
@@ -469,8 +468,9 @@ body {
 }
 
 .projects-header {
-  padding-top: 4rem;
+  padding-top: 1rem;
   padding-bottom: 4rem;
+  margin-top: 3rem;
 }
 
 .carousel {
@@ -510,36 +510,52 @@ body {
 }
 
 #contact {
-  background-image: url("img/contact_bg_compressed_blur.jpg");
+  background: linear-gradient(to right,rgba(245,245,245,.8),rgba(245,245,245,.8)),url("img/contact_background_compressed.jpg");;
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  height: 95%;
-  min-height: 52rem;
 }
 
 #contact-form-body {
-  background-color: white;
-  border-radius: 2rem;
-  max-width: 30rem;
+  max-width: 45rem;
+  width: 95%;
   position: absolute;
-  top: 10%;
-}
-
-@media screen and (max-width: 765px) {
-  #contact-form-body {
-    width: 20rem;
-    top: 10%;
-  }
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .contact-body {
+  padding: 2rem;
+  padding-bottom: 1rem;
+}
+
+.entry-name {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  left: 0;
+  font-size: .8rem;
+  margin-bottom: .2rem;
+  font-weight: 700;
+  color: #6a6a6a;
+}
+
+.form-group {
+  margin-bottom: 0.5rem;
+}
+
+.form-control {
+  font-weight: 600;
+  font-size: 1rem;
+  max-width: 100%;
+}
+
+.submit-button {
+  width: 30%;
+  padding-top: .8rem;
+  padding-bottom: .8rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: .3rem;
 }
 
 .footer {
@@ -648,6 +664,6 @@ body.modal-open {
   align-items: center;
 }
 
-* {
+/* {
   border: 1px solid red !important;
 }

@@ -167,7 +167,7 @@
     <!-- Skills section -->
     <section id="skills">
       <div class="container">
-        <div class="skills-header col-sm-12 col-lg-12" style="margin-top: 6rem; margin-bottom: 2rem;">
+        <div class="skills-header col-sm-12 col-lg-12" style="margin-top: 3rem; padding-top: 2rem;  margin-bottom: 2rem;">
           <h1 style="font-size: 3rem; font-weight: 700;">Skills</h1>
           <p>Below are some of my skills, and I'm always looking to learn more.</p>
         </div>
@@ -233,8 +233,8 @@
     </section>
 
     <!-- Projects section -->
-    <section id="pixel-sliver-solution">
     <section id="projects">
+      <div class="container" style="top: 50%; left: 50%;">
         <div class="projects-header">
           <h1 style="font-size: 3rem; font-weight: 700;">Projects</h1>
           <p style="font-size: 18px">(Click image for more information)</p>
@@ -250,28 +250,19 @@
           <img src="img/cs_compressed.jpg" id="cs-img" data-section="" />
         </div>
       </div>
+      </div>
     </section>
-  </section>
 
      <!-- Contact Section -->
     <section class="content-section text-black" id="contact">
       <div class="container" id="contact-form-body">
-          <div class="row">
-              <div class="col-lg-12 text-center mt-4">
-                  <h2 class="section-heading">Contact Me</h2>
-                  <h5 class="contact-info">Email: <a href="mailto:kenyon.leblanc.work@gmail.com">kenyon.leblanc.work@gmail.com</a></h5>
-                  <h5 class="contact-info">Phone: <a href="tel:7176600703">717-660-0703</a></h5>
+                  <h1 class="section-heading" style="padding-top: 1rem; margin-top: 3rem; font-size: 3rem; font-weight: 700;">Contact</h1>
                   <br>
-                  <h6 class="pb">...or use the following form</h6>
-              </div>
-          </div>
-          <div class="row">
-              <div class="col-lg-12">
-                  <form action="https://formspree.io/f/xdovjvgz" method="POST" class="needs-validation" novalidate>
+                  <h6 class="pb">Contact me by submitting the form below</h6>
+                  <form action="https://formspree.io/f/xdovjvgz" method="POST" class="needs-validation" style="background-color: white; border-radius: .5rem;" novalidate>
                       <div class="row contact-body">
-                          <div class="col-md-2" style="min-width: 15rem;">
                               <div class="form-group">
-                                  <label for="name">Name</label>
+                                  <label for="name" class="entry-name">Name*</label>
                                   <input type="text" class="form-control" placeholder="Your Name" id="name" name="name" required>
                                   <!-- <div class="invalid-feedback text-center">
                                     Please fill out this field.
@@ -279,7 +270,7 @@
                               -->
                               </div>
                               <div class="form-group">
-                                  <label for="email" class="mt-3">Email address</label>
+                                  <label for="email" class="mt-3 entry-name">Email address*</label>
                                   <input type="email" class="form-control" placeholder="Your Email" id="email" name="email" required>
                                   <!-- <div class="invalid-feedback text-center">
                                     Please fill out this field.
@@ -287,28 +278,23 @@
                               -->
                               </div>
                               <div class="form-group">
-                                  <label for="phone" class="mt-3">Phone (Optional)</label>
+                                  <label for="phone" class="mt-3 entry-name">Company</label>
                                   <input type="tel" class="form-control" placeholder="Your Phone" id="phone" name="phone">
-                                  <label for="message" class="mt-3">Message</label>
                                   </div>
-                          </div>
                           <div class="form-group">
-                            <div class="d-flex flex-column align-items-center">
-                                <textarea class="form-control" placeholder="Your Message" id="message" name="message" style="max-width: 400px;" required></textarea>
+                            <label for="message" class="mt-3 entry-name">Message*</label>
+                                <textarea class="form-control" placeholder="Your Message" id="message" name="message" required></textarea>
                                <!-- <div class="invalid-feedback text-center">
                                     Please fill out this field.
                                 </div>
                               -->
-                            </div>
                         </div>
                         
                           <div class="col-lg-12">
-                              <button type="submit" class="btn btn-lg btn-primary mt-4 mb-4">Send Message</button>
+                              <button type="submit" class="btn btn-lg btn-primary mt-4 submit-button">Submit</button>
                           </div>
                       </div>
                   </form>
-              </div>
-          </div>
       </div>
     </section>
 

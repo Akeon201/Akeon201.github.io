@@ -32,7 +32,7 @@ $(document).ready(function () {
 });
 
 // NO LONGER USED
-/*
+
 //Submit behavior
 $(document).ready(function(){
   $("form").on('submit', function(event){
@@ -69,7 +69,7 @@ $(document).ready(function(){
     }
   });
 });
-*/
+
 
 // NO LONGER USED
 /*
